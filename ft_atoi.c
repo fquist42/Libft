@@ -6,14 +6,12 @@
 /*   By: fquist <fquist@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/06 15:57:11 by fquist            #+#    #+#             */
-/*   Updated: 2021/09/07 15:57:35 by fquist           ###   ########.fr       */
+/*   Updated: 2021/09/08 15:40:23 by fquist           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-#include <limits.h>
+
+#include "libft.h"
 
 int ft_atoi(const char *str)
 {
@@ -49,11 +47,4 @@ int ft_atoi(const char *str)
         index++;
     }
     return base * sign;
-}
-int		main(void)
-{
-	char *c = "000324j234";
-
-	printf("Input:  %s\nOutput: %i\n", c, ft_atoi(c));
-	return (0);
 }

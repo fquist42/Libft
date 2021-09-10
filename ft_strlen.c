@@ -6,9 +6,11 @@
 /*   By: fquist <fquist@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/19 15:52:37 by fquist            #+#    #+#             */
-/*   Updated: 2021/08/20 15:44:26 by fquist           ###   ########.fr       */
+/*   Updated: 2021/09/08 15:41:34 by fquist           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int ft_strlen(char *s)
 {

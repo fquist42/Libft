@@ -6,9 +6,11 @@
 /*   By: fquist <fquist@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/20 13:31:32 by fquist            #+#    #+#             */
-/*   Updated: 2021/08/20 13:37:32 by fquist           ###   ########.fr       */
+/*   Updated: 2021/09/08 15:35:53 by fquist           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int ft_tolower(int c)
 {
@@ -17,12 +19,5 @@ int ft_tolower(int c)
         c = c + 32;
         return (c);
     }
-    return (0);
-}
-
-#include <stdio.h>
-int main()
-{
-    printf("%c\n", ft_tolower('B'));
     return (0);
 }

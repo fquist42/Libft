@@ -6,30 +6,40 @@
 /*   By: fquist <fquist@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/20 13:38:06 by fquist            #+#    #+#             */
-/*   Updated: 2021/08/20 15:56:26 by fquist           ###   ########.fr       */
+/*   Updated: 2021/09/08 19:05:49 by fquist           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
-char *ft_strchr(int c, char *s)
+int ft_strlen(char *s)
 {
-    int i;
+    int char_count = 0;
 
-    i = 0;
-    while(s[i] != '\0')
+    while(s[char_count] != '\0')
     {
-        if(s[i] == c)
-            return s + i;
-        i++;  
+        char_count++;
     }
-    return NULL;
+    return (char_count);
 }
 
-int main()
+char *ft_strchr(const char *s, int c)
 {
-    printf("%s\n", ft_strchr('a', "hallo"));
-    //printf("%s\n", strchr("hallo", 'a'));
-    return (0);
+  char *res;
+  int i;
+  char *string;
+
+  i = 0;
+  res = NULL;
+  string = (char *) s;
+  while (i <= ft_strlen(string))
+  {
+    if (string[i] == c)
+    {
+      res = string+i;
+      break;
+    }
+    i++;
+  }
+  return (res);
 }

@@ -6,13 +6,11 @@
 /*   By: fquist <fquist@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 15:38:44 by fquist            #+#    #+#             */
-/*   Updated: 2021/09/04 10:51:26 by fquist           ###   ########.fr       */
+/*   Updated: 2021/09/08 15:40:43 by fquist           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
 int ft_memcmp(const void *s1, const void *s2, size_t n)
 {
@@ -32,13 +30,4 @@ int ft_memcmp(const void *s1, const void *s2, size_t n)
         i++;
     }
     return (0);
-}
-
-int main()
-{
-    char s1[1] = "1";
-    char s2[1] = "1";
-    size_t n = 1;
-    printf("%d", ft_memcmp(s1, s2, n));
-    return 0;
 }

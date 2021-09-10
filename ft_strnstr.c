@@ -6,12 +6,11 @@
 /*   By: fquist <fquist@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/04 16:32:04 by fquist            #+#    #+#             */
-/*   Updated: 2021/09/06 15:55:51 by fquist           ###   ########.fr       */
+/*   Updated: 2021/09/08 15:41:42 by fquist           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 int ft_strlen(char *s)
 {
@@ -55,12 +54,4 @@ char *ft_strnstr(const char *haystack, const char *needle, size_t len)
 		index++;
 	}
 	return (0);
-}
-int main()
-{
-    char *hs = "Hallo wie gehts";
-    char *ne = "wie";
-    size_t len = 5;
-    printf("I found: %s\n",ft_strnstr(hs, ne, len));
-    return (0);
 }

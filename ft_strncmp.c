@@ -6,9 +6,11 @@
 /*   By: fquist <fquist@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/02 12:33:36 by fquist            #+#    #+#             */
-/*   Updated: 2021/09/02 13:24:25 by fquist           ###   ########.fr       */
+/*   Updated: 2021/09/08 15:41:38 by fquist           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int ft_strncmp(const char *s1, const char *s2, unsigned int n)
 {
@@ -24,16 +26,4 @@ int ft_strncmp(const char *s1, const char *s2, unsigned int n)
         i++;
     }
     return (0);
-}
-
-#include <stdio.h>
-#include <string.h>
-
-int main(void)
-{
-    char *a = "absd27fi7!";
-    char *b = "87d@";
-
-    printf("the length of strncmp is: %i\n", strncmp(a, b, 4));
-    printf("the length of FT_strncmp is: %i\n", ft_strncmp(a, b, 4));
 }

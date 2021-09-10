@@ -6,13 +6,11 @@
 /*   By: fquist <fquist@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/02 18:12:44 by fquist            #+#    #+#             */
-/*   Updated: 2021/09/03 15:38:01 by fquist           ###   ########.fr       */
+/*   Updated: 2021/09/08 15:40:38 by fquist           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <unistd.h>
-#include <string.h>
+#include "libft.h"
 
 void *ft_memchr(void *s, int c, int n)
 {
@@ -28,12 +26,4 @@ void *ft_memchr(void *s, int c, int n)
         i++;
     }
     return(NULL);
-}
-int main()
-{
-    char s[17] = "das ist ein test";
-    int c = 't';
-    int n = 10;
-    printf("%s", ft_memchr(s, c, n));
-    return 0;
 }
