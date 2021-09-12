@@ -6,7 +6,7 @@
 #    By: fquist <fquist@student.42heilbronn.de>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/07 17:49:12 by fquist            #+#    #+#              #
-#    Updated: 2021/09/08 14:52:41 by fquist           ###   ########.fr        #
+#    Updated: 2021/09/10 18:05:20 by fquist           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,11 @@
 NAME    =        libft.a
 
 SRCS    =       	ft_atoi.c \
+					ft_strlen.c \
 					ft_bzero.c \
+					ft_calloc.c \
+					ft_strdup.c \
+					ft_strlcpy.c \
 					ft_isalnum.c \
 					ft_isalpha.c \
 					ft_isascii.c \
@@ -26,9 +30,7 @@ SRCS    =       	ft_atoi.c \
 					ft_memmove.c \
 					ft_memset.c \
 					ft_strchr.c \
-					ft_strlcpy.c \
 					ft_strlcat.c \
-					ft_strlen.c \
 					ft_strncmp.c \
 					ft_strnstr.c \
 					ft_strrchr.c \

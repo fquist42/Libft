@@ -6,18 +6,18 @@
 /*   By: fquist <fquist@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/20 13:31:32 by fquist            #+#    #+#             */
-/*   Updated: 2021/09/08 15:35:53 by fquist           ###   ########.fr       */
+/*   Updated: 2021/09/11 16:47:30 by fquist           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_tolower(int c)
+int	ft_tolower(int c)
 {
-    if (c > 64 && c < 91)
-    {
-        c = c + 32;
-        return (c);
-    }
-    return (0);
+	if (c > 64 && c < 91)
+	{
+		c = c + 32;
+		return (c);
+	}
+	return (0);
 }
