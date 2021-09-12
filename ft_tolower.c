@@ -6,7 +6,7 @@
 /*   By: fquist <fquist@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/20 13:31:32 by fquist            #+#    #+#             */
-/*   Updated: 2021/09/11 16:47:30 by fquist           ###   ########.fr       */
+/*   Updated: 2021/09/12 14:57:00 by fquist           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,9 @@
 
 int	ft_tolower(int c)
 {
-	if (c > 64 && c < 91)
+	if ((c >= 'A' && c <= 'Z') || (c > 64 && c < 91))
 	{
-		c = c + 32;
-		return (c);
+		return (c + 32);
 	}
-	return (0);
+	return (c);
 }
