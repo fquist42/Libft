@@ -6,7 +6,7 @@
 /*   By: fquist <fquist@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/07 17:35:19 by fquist            #+#    #+#             */
-/*   Updated: 2021/09/10 18:06:41 by fquist           ###   ########.fr       */
+/*   Updated: 2021/09/15 13:37:26 by fquist           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,6 @@ int ft_tolower(int c);
 int ft_toupper(int c);
 char *ft_strdup(const char *s1);
 void *ft_calloc(size_t count, size_t size);
+char *ft_substr(char const *s, unsigned int start, size_t len);
 
 #endif

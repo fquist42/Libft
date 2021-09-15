@@ -6,7 +6,7 @@
 #    By: fquist <fquist@student.42heilbronn.de>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/07 17:49:12 by fquist            #+#    #+#              #
-#    Updated: 2021/09/10 18:05:20 by fquist           ###   ########.fr        #
+#    Updated: 2021/09/15 19:28:26 by fquist           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,6 +36,7 @@ SRCS    =       	ft_atoi.c \
 					ft_strrchr.c \
 					ft_tolower.c \
 					ft_toupper.c \
+					ft_substr.c \
 
 OBJS		=		$(SRCS:.c=.o)
 
@@ -62,3 +63,12 @@ fclean:		clean
 			$(RM) $(NAME)
 
 re:			fclean all
+
+main:
+	clear
+	gcc -Wall -Wextra -Werror main.c $(SRCS) -o test
+	./test
+
+norm:
+	clear
+	norminette -R CheckForbiddenSourceHeader $(SRCS) -o
