@@ -6,11 +6,13 @@
 /*   By: fquist <fquist@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/04 10:53:00 by fquist            #+#    #+#             */
-/*   Updated: 2021/10/01 19:57:55 by fquist           ###   ########.fr       */
+/*   Updated: 2021/10/04 17:54:59 by fquist           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/* protecting case if dst > src and reversing the memmove process. */
 
 static char	*rev_memmove(void *dst, const void *src, size_t len)
 {
@@ -22,6 +24,15 @@ static char	*rev_memmove(void *dst, const void *src, size_t len)
 	return (dst);
 }
 
+/*
+DESCRIPTION
+	Copy byte string.
+	The ft_memmove() function copies len bytes from string src to string dst.
+	The two strings may overlap; the copy is always done in a non-destructive
+	manner.
+RETURN VALUES
+	The ft_memmove() function returns the original value of dst.
+*/
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	size_t	i;

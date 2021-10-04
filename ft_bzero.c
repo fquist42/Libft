@@ -6,24 +6,27 @@
 /*   By: fquist <fquist@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/02 17:53:33 by fquist            #+#    #+#             */
-/*   Updated: 2021/09/11 15:48:46 by fquist           ###   ########.fr       */
+/*   Updated: 2021/10/04 20:35:05 by fquist           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_bzero(void *b, int n)
+/*
+DESCRIPTION
+	The ft_bzero() function writes n zeroed bytes to the string s. 
+	If n is zero, bzero() does nothing.
+*/
+void	*ft_bzero(void *s, size_t n)
 {
-	unsigned char	*x;
-	unsigned char	y;
+	unsigned char	*str;
 
-	x = b;
-	y = '\0';
+	str = s;
 	while (n > 0)
 	{
-		*x = y;
-		x++;
+		*str = '\0';
+		str++;
 		n--;
 	}
-	return (b);
+	return (str);
 }

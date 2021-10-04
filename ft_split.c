@@ -6,12 +6,13 @@
 /*   By: fquist <fquist@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/16 20:13:14 by fquist            #+#    #+#             */
-/*   Updated: 2021/09/27 23:25:09 by fquist           ###   ########.fr       */
+/*   Updated: 2021/10/04 19:18:48 by fquist           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*	frees memory in case of allocation failure */
 static int	free_mem(char **arr, int pos)
 {
 	while (pos >= 0)
@@ -23,6 +24,8 @@ static int	free_mem(char **arr, int pos)
 	return (0);
 }
 
+/*	counts the substrings in the string s which are separated
+	by the delimiter c and returns the result */
 static int	get_count_substr(const char *s, char c)
 {
 	int	res;
@@ -39,6 +42,7 @@ static int	get_count_substr(const char *s, char c)
 	return (res);
 }
 
+/*	insert and allocates the substrings using ft_substr() */
 static int	insert_str(char const *s, char c, char **res)
 {
 	int	str_len;
@@ -66,6 +70,15 @@ static int	insert_str(char const *s, char c, char **res)
 	return (1);
 }
 
+/*
+DESCRIPTION
+	ft_split() allocates (with malloc(3)) and returns an array of strings
+	obtained by splitting ’s’ using the character ’c’ as a delimiter.
+	The array must be ended by a NULL pointer.
+RETURN VALUES
+	The array of new strings resulting from the split.
+	NULL if the allocation fails.
+*/
 char	**ft_split(char const *s, char c)
 {
 	char	**res;

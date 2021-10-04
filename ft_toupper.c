@@ -6,17 +6,26 @@
 /*   By: fquist <fquist@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/20 13:26:10 by fquist            #+#    #+#             */
-/*   Updated: 2021/09/12 14:56:28 by fquist           ###   ########.fr       */
+/*   Updated: 2021/10/04 20:09:07 by fquist           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+DESCRIPTION
+	Lower case to upper case letter conversion.
+	The ft_toupper() function converts a lower-case letter to the corresponding
+	upper-case letter. The argument must be representable as an unsigned char
+	or the value of EOF.
+RETURN VALUES
+	If the argument is a lower-case letter, the ft_toupper() function returns the
+	corresponding upper-case letter if there is one; otherwise, the argument is 
+	returned unchanged.
+*/
 int	ft_toupper(int c)
 {
-	if ((c >= 'a' && c <= 'z') || (c >= 97 && c <= 122))
-	{
+	if (c >= 'a' && c <= 'z')
 		return (c - 32);
-	}
 	return (c);
 }

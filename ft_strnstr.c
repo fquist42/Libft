@@ -6,12 +6,23 @@
 /*   By: fquist <fquist@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/04 16:32:04 by fquist            #+#    #+#             */
-/*   Updated: 2021/10/01 16:52:23 by fquist           ###   ########.fr       */
+/*   Updated: 2021/10/04 18:51:29 by fquist           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+DESCRIPTION
+	Locate a substring in a string.
+	The ft_strnstr() function locates the first occurrence of the null-terminated
+	string needle in the string haystack, where not more than len characters
+	are searched.  Characters that appear after a `\0' character are not searched.
+RETURN VALUES
+	If needle is an empty string, haystack is returned; if needle occurs nowhere
+	in haystack, NULL is returned; otherwise a pointer to the first character of
+	the first occurrence of needle is returned.
+*/
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t	i;

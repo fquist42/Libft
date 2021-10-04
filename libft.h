@@ -6,7 +6,7 @@
 /*   By: fquist <fquist@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/07 17:35:19 by fquist            #+#    #+#             */
-/*   Updated: 2021/09/30 20:11:41 by fquist           ###   ########.fr       */
+/*   Updated: 2021/10/04 15:08:07 by fquist           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ typedef struct s_list
 }	t_list;
 
 void	*ft_memset(void *b, int c, int n);
-void	*ft_bzero(void *b, int n);
+void	*ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
 void	*ft_memmove(void *dst, const void *src, size_t len);
 void	*ft_memchr(void *s, int c, int n);

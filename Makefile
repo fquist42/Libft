@@ -6,7 +6,7 @@
 #    By: fquist <fquist@student.42heilbronn.de>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/20 18:21:35 by fquist            #+#    #+#              #
-#    Updated: 2021/10/01 17:37:12 by fquist           ###   ########.fr        #
+#    Updated: 2021/10/04 21:25:35 by fquist           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,7 +48,7 @@ FILES	=			ft_atoi.c \
 					ft_striteri.c \
 					ft_strmapi.c \
 					
-BONUS	=			ft_lstnew.c \
+BONUSFILES	=		ft_lstnew.c \
 					ft_lstadd_front.c \
 					ft_lstsize.c \
 					ft_lstlast.c \
@@ -60,7 +60,7 @@ BONUS	=			ft_lstnew.c \
 
 OBJS		=		$(FILES:.c=.o)
 
-BONUSOBJS	=		$(BONUS:.c=.o)
+BONUSOBJS	=		$(BONUSFILES:.c=.o)
 
 CC			=        gcc
 
@@ -72,7 +72,7 @@ RM			=		rm -f
 
 all:		$(NAME)
 
-bonus:		$(NAME) $(BONUSOBJS)
+bonus:		$(BONUSOBJS)
 			$(AR) $(NAME) $(BONUSOBJS)
 
 .c.o:
@@ -91,9 +91,9 @@ re:			fclean all
 
 main:
 	clear
-	gcc -Wall -Wextra -Werror main.c $(FILES) $(BONUS) -o test
+	gcc -Wall -Wextra -Werror main.c $(FILES) $(BONUSFILES) -o test
 	./test
 
 norm:
 	clear
-	norminette -R CheckForbiddenSourceHeader $(FILES) $(BONUS) -o
+	norminette -R CheckForbiddenSourceHeader $(FILES) $(BONUSFILES) -o

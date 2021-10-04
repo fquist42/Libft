@@ -6,12 +6,16 @@
 /*   By: fquist <fquist@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/16 16:55:01 by fquist            #+#    #+#             */
-/*   Updated: 2021/10/01 20:06:16 by fquist           ###   ########.fr       */
+/*   Updated: 2021/10/04 19:02:35 by fquist           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/* 
+	Checking for specified set-characters in the string to trim.
+	Returns 1 if the character found is in set and NULL if not.
+*/
 static int	ft_check_set(char c, char const *set)
 {
 	size_t	i;
@@ -28,6 +32,14 @@ static int	ft_check_set(char c, char const *set)
 	return (0);
 }
 
+/*
+DESCRIPTION
+	ft_strtrim() allocates (with malloc(3)) and returns a copy of ’s1’ with the
+	characters specified in ’set’ removed from the beginning and the end of the
+	string.
+RETURN VALUES
+	Returns the trimmed string or NULL if the allocation failed.
+*/
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*newstr;
