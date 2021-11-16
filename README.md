@@ -6,7 +6,7 @@ The task is to create your own C library with some highly useful standard functi
 This library is an expanded version of the "original" project and will continue to expand with further projects.
 
 ## How to use it:
-To use this library for your code just follow these 4 steps.
+To use this library for your own code just follow these 4 steps.
 
 **1. Clone the repo**
 ```
