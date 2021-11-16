@@ -1,9 +1,9 @@
 ## Libft
-This is an expanded version of the "original" Libft Project from the 42-Core_Curriculum. 
+This is the first Project from the 42-Core_Curriculum. 
 The task is to create your own C library with some highly useful standard functions for later use.
 
 (Subject to change)
-This library will expand with further projects.
+This library is an expanded version of the "original" project and will continue to expand with further projects.
 
 ## How to use it:
 To use this library for your code just follow these 3 steps.
