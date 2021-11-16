@@ -6,23 +6,23 @@ The task is to create your own C library with some highly useful standard functi
 This library is an expanded version of the "original" project and will continue to expand with further projects.
 
 ## How to use it:
-To use this library for your code just follow these 3 steps.
+To use this library for your code just follow these 4 steps.
 
-**0. Clone the repo**
+**1. Clone the repo**
 ```
 git clone https://github.com/fquist42/Libft.git
 ```
-**1. Make the library**
+**2. Make the library**
 
 call Make from libft-folder 
 ```
 make
 ```
-**2. Include the Headerfile in your ```.c``` files**
+**3. Include the Headerfile in your ```.c``` files**
 ```c
 #include "libft.h"
 ```
-**3. Compile your srcs with the library**
+**4. Compile your srcs with the library**
 ```
 gcc your-srcs.c path_to_libft/libft.a -I./path_to_libft/libft/inc
 ```
