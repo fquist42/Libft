@@ -1,5 +1,5 @@
 ## Libft
-This is the first Project from the 42-Core_Curriculum. 
+This is the first Project from the 42-Core_Curriculum.<br> 
 The task is to create your own C library with some highly useful standard functions for later use.
 
 (Subject to change)
@@ -26,7 +26,6 @@ make
 ```
 gcc your-srcs.c path_to_libft/libft.a -I./path_to_libft/libft/inc
 ```
-
 
 <br>
 <hr>
