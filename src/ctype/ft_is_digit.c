@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_is_digit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fquist <fquist@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/19 14:54:02 by fquist            #+#    #+#             */
-/*   Updated: 2021/10/04 20:13:11 by fquist           ###   ########.fr       */
+/*   Created: 2021/08/19 14:11:48 by fquist            #+#    #+#             */
+/*   Updated: 2021/11/16 18:40:13 by fquist           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 
 /*
 DESCRIPTION
-	Printing character test (space character inclusive).
-	The ft_isprint() function tests for any printing character, including
-	space (` ').  The value of the argument must be representable as 
-	an unsigned char or the value of EOF.
+	Decimal-digit character test
+	The ft_isdigit() function tests for a decimal digit character (0-9).
+	The value of the argument must be representable as an unsigned char or
+	the value of EOF.
 RETURN VALUES
-	The ft_isprint() function returns zero if the character tests false
-	and returns non-zero if the character tests true.
+	The ft_isdigit() function return zero if the character tests false 
+	and return non-zero if the character tests true.
 */
-int	ft_isprint(int c)
+int	ft_is_digit(int c)
 {
-	return (c >= 32 && c <= 126);
+	return (c >= '0' && c <= '9');
 }

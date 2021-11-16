@@ -6,14 +6,14 @@
 /*   By: fquist <fquist@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/16 20:13:14 by fquist            #+#    #+#             */
-/*   Updated: 2021/10/04 19:18:48 by fquist           ###   ########.fr       */
+/*   Updated: 2021/11/16 18:23:22 by fquist           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*	frees memory in case of allocation failure */
-static int	free_mem(char **arr, int pos)
+static int	split_free(char **arr, int pos)
 {
 	while (pos >= 0)
 	{
@@ -61,7 +61,7 @@ static int	insert_str(char const *s, char c, char **res)
 		}
 		res[arr_pos] = ft_substr(s, (str_pos - str_len), str_len);
 		if (res == NULL)
-			return (free_mem(res, arr_pos));
+			return (split_free(res, arr_pos));
 		while (s[str_pos] != '\0' && s[str_pos] == c)
 			str_pos++;
 		arr_pos++;

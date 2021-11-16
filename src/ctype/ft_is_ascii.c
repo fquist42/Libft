@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_is_ascii.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fquist <fquist@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/19 14:20:35 by fquist            #+#    #+#             */
-/*   Updated: 2021/10/04 20:11:44 by fquist           ###   ########.fr       */
+/*   Created: 2021/08/19 14:36:15 by fquist            #+#    #+#             */
+/*   Updated: 2021/11/16 18:40:08 by fquist           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,14 @@
 
 /*
 DESCRIPTION
-	Alphanumeric character test.
-	The ft_isalnum() function tests for any character for which ft_isalpha(3) or 
-	ft_isdigit(3) is true.  The value of the argument must be representable as an 
-	unsigned char or the value of EOF.
+	Test for ASCII character.
+	The ft_isascii() function tests for an ASCII character, which is any character
+	between 0 and octal 0177 inclusive.
 RETURN VALUES
-	The ft_isalnum() function returns zero if the character tests false and
+	The ft_isascii() function returns zero if the character tests false and
 	returns non-zero if the character tests true.
 */
-int	ft_isalnum(int c)
+int	ft_is_ascii(int c)
 {
-	return (ft_isalpha(c) || ft_isdigit(c));
+	return (c >= 0 && c <= 127);
 }

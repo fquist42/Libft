@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_is_all_num.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fquist <fquist@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/02 16:05:14 by fquist            #+#    #+#             */
-/*   Updated: 2021/10/04 17:54:56 by fquist           ###   ########.fr       */
+/*   Created: 2021/08/19 14:20:35 by fquist            #+#    #+#             */
+/*   Updated: 2021/11/16 19:04:29 by fquist           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,15 @@
 
 /*
 DESCRIPTION
-	Fill a byte string with a byte value.
-	The ft_memset() function writes len bytes of value c 
-	(converted to an unsigned char) to the string b.
+	Alphanumeric character test.
+	The ft_isalnum() function tests for any character for which ft_isalpha(3) or 
+	ft_isdigit(3) is true.  The value of the argument must be representable as an 
+	unsigned char or the value of EOF.
 RETURN VALUES
-	The ft_memset() function returns its first argument.
+	The ft_isalnum() function returns zero if the character tests false and
+	returns non-zero if the character tests true.
 */
-void	*ft_memset(void *b, int c, int n)
+int	ft_is_all_num(int c)
 {
-	int				i;
-	unsigned char	*x;
-	unsigned char	y;
-
-	i = 0;
-	x = b;
-	y = c;
-	while (n > 0)
-	{
-		*x = y;
-		x++;
-		n--;
-	}
-	return (b);
+	return (ft_is_alpha(c) || ft_is_digit(c));
 }

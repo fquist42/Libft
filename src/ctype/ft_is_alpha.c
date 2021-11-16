@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_is_alpha.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fquist <fquist@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/17 17:05:21 by fquist            #+#    #+#             */
-/*   Updated: 2021/10/04 20:16:47 by fquist           ###   ########.fr       */
+/*   Updated: 2021/11/16 18:40:01 by fquist           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ RETURN VALUES
 	The ft_isalpha() function returns zero if the character tests false and 
 	returns non-zero if the character tests true.
 */
-int	ft_isalpha(int c)
+int	ft_is_alpha(int c)
 {
 	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 		return (1);

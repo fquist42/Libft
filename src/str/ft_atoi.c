@@ -6,7 +6,7 @@
 /*   By: fquist <fquist@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/06 15:57:11 by fquist            #+#    #+#             */
-/*   Updated: 2021/10/04 20:22:50 by fquist           ###   ########.fr       */
+/*   Updated: 2021/11/16 21:13:09 by fquist           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	ft_atoi(const char *nptr)
 	}
 	else if (nptr[offset] == '+')
 		offset++;
-	while (ft_isdigit(nptr[offset]))
+	while (ft_is_digit(nptr[offset]))
 	{
 		result *= 10;
 		result += nptr[offset] - '0';

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_to_upper.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fquist <fquist@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/20 13:31:32 by fquist            #+#    #+#             */
-/*   Updated: 2021/10/04 20:08:12 by fquist           ###   ########.fr       */
+/*   Created: 2021/08/20 13:26:10 by fquist            #+#    #+#             */
+/*   Updated: 2021/11/16 18:40:31 by fquist           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,18 @@
 
 /*
 DESCRIPTION
-	Upper case to lower case letter conversion.
-	The ft_tolower() function converts an upper-case letter to the corresponding
-	lower-case letter. The argument must be representable as an unsigned char
+	Lower case to upper case letter conversion.
+	The ft_toupper() function converts a lower-case letter to the corresponding
+	upper-case letter. The argument must be representable as an unsigned char
 	or the value of EOF.
 RETURN VALUES
-	If the argument is an upper-case letter, the ft_tolower() function returns
-	the corresponding lower-case letter if there is one; otherwise, the argument
-	is returned unchanged.
+	If the argument is a lower-case letter, the ft_toupper() function returns the
+	corresponding upper-case letter if there is one; otherwise, the argument is 
+	returned unchanged.
 */
-int	ft_tolower(int c)
+int	ft_to_upper(int c)
 {
-	if (c >= 'A' && c <= 'Z')
-		return (c + 32);
+	if (c >= 'a' && c <= 'z')
+		return (c - 32);
 	return (c);
 }
