@@ -6,7 +6,7 @@
 /*   By: fquist <fquist@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/06 15:57:11 by fquist            #+#    #+#             */
-/*   Updated: 2021/11/16 21:13:09 by fquist           ###   ########.fr       */
+/*   Updated: 2021/12/31 21:26:57 by fquist           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,29 +20,29 @@ DESCRIPTION
 RETURN VALUES
 	Returns the converted string.
 */
-int	ft_atoi(const char *nptr)
+int	ft_atoi(const char *str)
 {
-	int	result;
-	int	offset;
-	int	sign;
+	long long int	n;
+	int				is_negative;
 
-	result = 0;
-	offset = 0;
-	sign = 1;
-	while (nptr[offset] == ' ' || (nptr[offset] >= 9 && nptr[offset] <= 13))
-		offset++;
-	if (nptr[offset] == '-')
+	n = 0;
+	is_negative = 1;
+	while (ft_is_space(*str))
+		str++;
+	if (ft_is_sign(*str))
 	{
-		sign *= -1;
-		offset++;
+		if (*str == '-')
+			is_negative = -1;
+		str++;
 	}
-	else if (nptr[offset] == '+')
-		offset++;
-	while (ft_is_digit(nptr[offset]))
+	while (ft_is_digit(*str))
 	{
-		result *= 10;
-		result += nptr[offset] - '0';
-		offset++;
+		n = (n * 10) + (*str - '0');
+		if (n < 0 && is_negative == -1)
+			return (0);
+		else if (n < 0 && is_negative == 1)
+			return (-1);
+		str++;
 	}
-	return (result * sign);
+	return (n * is_negative);
 }

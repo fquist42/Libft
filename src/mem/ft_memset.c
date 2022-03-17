@@ -6,7 +6,7 @@
 /*   By: fquist <fquist@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/02 16:05:14 by fquist            #+#    #+#             */
-/*   Updated: 2021/11/16 18:12:35 by fquist           ###   ########.fr       */
+/*   Updated: 2022/01/06 01:04:53 by fquist           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,9 @@ RETURN VALUES
 */
 void	*ft_memset(void *b, int c, int len)
 {
-	int				i;
 	unsigned char	*x;
 	unsigned char	y;
 
-	i = 0;
 	x = b;
 	y = c;
 	while (len > 0)

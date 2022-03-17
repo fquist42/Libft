@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_get_numlen.c                                    :+:      :+:    :+:   */
+/*   ft_free_split.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fquist <fquist@student.42heilbronn.de>     +#+  +:+       +#+        */
+/*   By: tjensen <tjensen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/16 18:17:25 by fquist            #+#    #+#             */
-/*   Updated: 2021/12/03 18:41:42 by fquist           ###   ########.fr       */
+/*   Created: 2021/10/04 14:25:27 by tjensen           #+#    #+#             */
+/*   Updated: 2021/10/21 14:16:32 by tjensen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*	Calculating the length of the parameter nbr and returns it. */
-int	ft_get_numlen(int nbr)
+char	**ft_free_split(char **split_arr)
 {
-	int	len;
+	size_t	i;
 
-	len = 0;
-	if (nbr <= 0)
-		len++;
-	while (nbr)
+	if (split_arr == NULL)
+		return (NULL);
+	i = 0;
+	while (split_arr[i] != NULL)
 	{
-		len++;
-		nbr = nbr / 10;
+		free(split_arr[i]);
+		split_arr[i] = NULL;
+		i++;
 	}
-	return (len);
+	free(split_arr);
+	split_arr = NULL;
+	return (NULL);
 }

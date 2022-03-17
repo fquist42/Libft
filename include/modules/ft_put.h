@@ -1,27 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_ascii.c                                      :+:      :+:    :+:   */
+/*   ft_put.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fquist <fquist@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/19 14:36:15 by fquist            #+#    #+#             */
-/*   Updated: 2022/01/30 22:54:13 by fquist           ###   ########.fr       */
+/*   Created: 2021/11/16 18:13:28 by fquist            #+#    #+#             */
+/*   Updated: 2021/11/29 23:05:47 by fquist           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef FT_PUT_H
+# define FT_PUT_H
 
-/*
-DESCRIPTION
-	Test for ASCII character.
-	The ft_isascii() function tests for an ASCII character, which is any character
-	between 0 and octal 0177 inclusive.
-RETURN VALUES
-	The ft_isascii() function returns zero if the character tests false and
-	returns non-zero if the character tests true.
-*/
-int	ft_is_ascii(int c)
-{
-	return (c >= 0 && c <= 127);
-}
+void	ft_putchar_fd(char c, int fd);
+void	ft_putchar(char c);
+void	ft_putendl_fd(char *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
+void	ft_putstr_fd(char *s, int fd);
+void	ft_putstr(char *s);
+
+#endif

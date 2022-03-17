@@ -1,24 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ctype.h                                         :+:      :+:    :+:   */
+/*   ft_count_c.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fquist <fquist@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/16 18:01:14 by fquist            #+#    #+#             */
-/*   Updated: 2021/11/16 18:39:49 by fquist           ###   ########.fr       */
+/*   Created: 2022/01/12 21:41:53 by fquist            #+#    #+#             */
+/*   Updated: 2022/01/14 23:02:14 by fquist           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_CTYPE_H
-# define FT_CTYPE_H
+#include "libft.h"
 
-int	ft_is_alpha(int c);
-int	ft_is_ascii(int c);
-int	ft_is_digit(int c);
-int	ft_is_print(int c);
-int	ft_to_lower(int c);
-int	ft_to_upper(int c);
-int	ft_is_all_num(int c);
+/*
+DESCRIPTION
+	ft_count_c() counts the appearances of the character 'c' inside string *s
+	and returns the the count as an integer.
+*/
+int	ft_count_c(char *s, char c)
+{
+	int	i;
+	int	x;
 
-#endif
+	i = 0;
+	x = 0;
+	if (!s)
+		return (-1);
+	while (s && s[i])
+	{
+		if (s[i++] == c)
+			x++;
+	}
+	return (x);
+}

@@ -6,7 +6,7 @@
 /*   By: fquist <fquist@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 21:41:33 by fquist            #+#    #+#             */
-/*   Updated: 2021/10/04 17:55:11 by fquist           ###   ########.fr       */
+/*   Updated: 2022/01/06 01:05:40 by fquist           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ RETURN VALUES
 */
 t_list	*ft_lstnew(void *content)
 {
-	t_list	*head;
 	t_list	*element_1;
 
 	element_1 = NULL;
@@ -31,6 +30,5 @@ t_list	*ft_lstnew(void *content)
 		return (NULL);
 	element_1->content = content;
 	element_1->next = NULL;
-	head = element_1;
 	return (element_1);
 }

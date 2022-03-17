@@ -1,31 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_alpha.c                                      :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fquist <fquist@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/17 17:05:21 by fquist            #+#    #+#             */
-/*   Updated: 2021/11/23 17:14:04 by fquist           ###   ########.fr       */
+/*   Created: 2021/11/29 23:13:53 by fquist            #+#    #+#             */
+/*   Updated: 2021/11/29 23:13:53 by fquist           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-DESCRIPTION
-	Alphabetic character test.
-	The ft_isalpha() function tests for any character for which isupper(3) or
-	islower(3) is true.  The value of the argument must be representable as an
-	unsigned char or the value of EOF.
-RETURN VALUES
-	The ft_isalpha() function returns zero if the character tests false and 
-	returns non-zero if the character tests true.
-*/
-int	ft_is_alpha(char c)
+int	ft_strcmp(const char *s1, const char *s2)
 {
-	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+	size_t			i;
+	unsigned char	*new1;
+	unsigned char	*new2;
+
+	i = 0;
+	new1 = (unsigned char *)s1;
+	new2 = (unsigned char *)s2;
+	while (new1[i] && new2[i] && (new1[i] - new2[i] == 0))
+		i++;
+	if (!new1[i] && new2[i])
+		return (-1);
+	else if (new1[i] && !new2[i])
 		return (1);
-	else
+	else if (!new1[i] && !new2[i])
 		return (0);
+	else
+		return (new1[i] - new2[i]);
 }

@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_ascii.c                                      :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fquist <fquist@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/19 14:36:15 by fquist            #+#    #+#             */
-/*   Updated: 2022/01/30 22:54:13 by fquist           ###   ########.fr       */
+/*   Created: 2021/11/29 23:12:24 by fquist            #+#    #+#             */
+/*   Updated: 2021/11/29 23:12:25 by fquist           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-DESCRIPTION
-	Test for ASCII character.
-	The ft_isascii() function tests for an ASCII character, which is any character
-	between 0 and octal 0177 inclusive.
-RETURN VALUES
-	The ft_isascii() function returns zero if the character tests false and
-	returns non-zero if the character tests true.
-*/
-int	ft_is_ascii(int c)
+char	*ft_strcpy(char *dst, const char *src)
 {
-	return (c >= 0 && c <= 127);
+	size_t	i;
+
+	i = 0;
+	while (src[i])
+	{
+		dst[i] = src[i];
+		i++;
+	}
+	dst[i] = '\0';
+	return (dst);
 }

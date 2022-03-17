@@ -6,7 +6,7 @@
 /*   By: fquist <fquist@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/19 15:52:37 by fquist            #+#    #+#             */
-/*   Updated: 2021/10/04 18:40:14 by fquist           ###   ########.fr       */
+/*   Updated: 2021/12/10 21:21:42 by fquist           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ size_t	ft_strlen(char const *s)
 	size_t	char_count;
 
 	char_count = 0;
+	if (!s)
+		return (0);
 	while (s[char_count] != '\0')
 		char_count++;
 	return (char_count);

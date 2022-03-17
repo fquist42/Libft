@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_ascii.c                                      :+:      :+:    :+:   */
+/*   ft_find_max_element.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fquist <fquist@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/19 14:36:15 by fquist            #+#    #+#             */
-/*   Updated: 2022/01/30 22:54:13 by fquist           ###   ########.fr       */
+/*   Created: 2022/01/03 23:49:19 by fquist            #+#    #+#             */
+/*   Updated: 2022/01/04 14:03:25 by fquist           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,21 @@
 
 /*
 DESCRIPTION
-	Test for ASCII character.
-	The ft_isascii() function tests for an ASCII character, which is any character
-	between 0 and octal 0177 inclusive.
-RETURN VALUES
-	The ft_isascii() function returns zero if the character tests false and
-	returns non-zero if the character tests true.
+	Iterates over stack and compares each elements content.
+	Returns the element with the highest content.
 */
-int	ft_is_ascii(int c)
+t_list	*find_max_node(t_list **stack)
 {
-	return (c >= 0 && c <= 127);
+	t_list	*tmp;
+	t_list	*max;
+
+	tmp = *stack;
+	max = tmp;
+	while (tmp)
+	{
+		if (tmp->content > max->content)
+			max = tmp;
+		tmp = tmp->next;
+	}
+	return (max);
 }

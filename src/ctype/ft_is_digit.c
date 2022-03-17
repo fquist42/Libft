@@ -6,7 +6,7 @@
 /*   By: fquist <fquist@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/19 14:11:48 by fquist            #+#    #+#             */
-/*   Updated: 2021/11/16 18:40:13 by fquist           ###   ########.fr       */
+/*   Updated: 2021/12/05 17:07:16 by fquist           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,8 @@ RETURN VALUES
 */
 int	ft_is_digit(int c)
 {
-	return (c >= '0' && c <= '9');
+	if (c >= '0' && c <= '9')
+		return (1);
+	else
+		return (0);
 }

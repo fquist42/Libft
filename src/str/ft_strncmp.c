@@ -6,7 +6,7 @@
 /*   By: fquist <fquist@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/02 12:33:36 by fquist            #+#    #+#             */
-/*   Updated: 2021/10/04 18:47:46 by fquist           ###   ########.fr       */
+/*   Updated: 2022/01/07 22:19:54 by fquist           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ int	ft_strncmp(const char *s1, const char *s2, unsigned int n)
 	i = 0;
 	uc_s1 = (unsigned char *) s1;
 	uc_s2 = (unsigned char *) s2;
+	if (uc_s1 == NULL || uc_s2 == NULL)
+		return (0);
 	while (i < n)
 	{
 		if (uc_s1[i] != uc_s2[i])
