@@ -1,3 +1,6 @@
+# Update: Added the projects "Ft_Printf" and "Get_next_line" including their bonuses to the library.
+ft_printf is a simpler remake of real printf and get_next_line is a programm to read from a filedescriptor line by line.
+
 ## Libft
 This is the first Project from the 42-Core_Curriculum.<br> 
 The task is to create your own C library with some highly useful standard functions for later use.
