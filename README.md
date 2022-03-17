@@ -1,4 +1,4 @@
-# Update: Added the projects "Ft_Printf" and "Get_next_line" including their bonuses to the library.
+### Update: Added the projects "Ft_Printf" and "Get_next_line" including their bonuses to the library.
 ft_printf is a simpler remake of real printf and get_next_line is a programm to read from a filedescriptor line by line.
 
 ## Libft
